@@ -1,5 +1,6 @@
 from pydantic import BaseModel
 from typing import List
+from typing import Optional
 
 ## pydantic schema
 
@@ -53,4 +54,16 @@ class Login(BaseModel):
     password : str
     class Config():
         orm_mode = True
+
+
+
+## JWT token schemas
+
+class Token(BaseModel):
+    access_token: str
+    token_type: str
+
+
+class TokenData(BaseModel):
+    email: Optional[str] = None
 

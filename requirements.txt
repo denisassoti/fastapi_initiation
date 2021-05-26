@@ -2,7 +2,8 @@ fastapi
 uvicorn
 passlib
 bcrypt
-
+python-jose
+python-multipart
 
 
 #pip install -r requirements.txt 
