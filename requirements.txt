@@ -1,0 +1,9 @@
+fastapi
+uvicorn
+passlib
+bcrypt
+
+
+
+#pip install -r requirements.txt 
+#passlib pour le hashage ; contient plusieurs algorithme de cryptage
