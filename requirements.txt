@@ -4,7 +4,9 @@ passlib
 bcrypt
 python-jose
 python-multipart
+gunicorn
 
 
+# pip freeze > requirements.txt
 #pip install -r requirements.txt 
 #passlib pour le hashage ; contient plusieurs algorithme de cryptage
