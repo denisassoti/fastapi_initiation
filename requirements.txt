@@ -4,7 +4,7 @@ passlib
 bcrypt
 python-jose
 python-multipart
-gunicorn
+#gunicorn
 
 
 # pip freeze > requirements.txt
