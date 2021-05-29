@@ -9,8 +9,8 @@ class Blog(Base):
     __tablename__ = 'blog'
 
     id = Column(Integer, primary_key=True, index=True)
-    title = Column(String)
-    body = Column(String)
+    title = Column(String(50))
+    body = Column(String(100))
     user_id = Column(Integer, ForeignKey('user.id')) 
     creator = relationship("User", back_populates = "blogs")
 
@@ -19,9 +19,9 @@ class User(Base):
     __tablename__ = 'user'
 
     id = Column(Integer, primary_key=True, index=True)
-    name = Column(String)
-    email = Column(String)
-    password = Column(String)
+    name = Column(String(100))
+    email = Column(String(100))
+    password = Column(String(100))
     blogs = relationship("Blog", back_populates = "creator")
 
 
