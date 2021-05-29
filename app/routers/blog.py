@@ -1,11 +1,12 @@
-from app import models, schemas, oauth2
+from app import models, schemas
+from app.settings import oauth2
 from fastapi import APIRouter, Depends, status, Response, HTTPException
 from sqlalchemy.orm import Session
 from typing import List
 from app.settings.hashing import Hash
 from app.settings import database
 from app.controllers import blog
-from app.oauth2 import get_current_user
+from app.settings.oauth2 import get_current_user
 
 router = APIRouter(prefix='/blog', tags=['Blog'])
 
