@@ -33,7 +33,8 @@ if(db_connection.__len__ == 0 or db_connection == 'sqlite'):
         SQLALCHEMY_DATABASE_URL,connect_args = {"check_same_thread": False}
     )
 elif(db_connection == 'postgresql'):
-    SQLALCHEMY_DATABASE_URL = 'postgresql://{}:{}@{}:{}/{}?sslmode={}'.format(db_username, db_password, host_server, db_server_port, database_name, ssl_mode)
+    #SQLALCHEMY_DATABASE_URL = 'postgresql://{}:{}@{}:{}/{}?sslmode={}'.format(db_username, db_password, host_server, db_server_port, database_name, ssl_mode)
+    SQLALCHEMY_DATABASE_URL = 'postgresql://tdvzdfuqamhgrv:ffdf3ccf930407d55aa795af4a565ad6189dbeea850e823357b9ec140f3be197@ec2-184-73-198-174.compute-1.amazonaws.com:5432/d5grfku45ar20l'
     init_engine = create_engine(
         SQLALCHEMY_DATABASE_URL, pool_size = 3, max_overflow = 0 
     )
